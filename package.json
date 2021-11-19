@@ -1,0 +1,40 @@
+{
+  "name": "puppeteer-test-proj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "pretest": "npm run build",
+    "test": "jest",
+    "test:store": " npm run test -- --suite=store",
+    "test:wallet": " npm run test -- --suite=wallet"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.3.1",
+    "jest-puppeteer": "^6.0.0",
+    "puppeteer-core": "^11.0.0",
+    "yargs": "^17.2.1"
+  },
+  "devDependencies": {
+    "@types/expect-puppeteer": "^4.4.7",
+    "@types/jest": "^27.0.2",
+    "@types/jest-environment-puppeteer": "^4.4.1",
+    "@types/puppeteer": "^5.4.4",
+    "@types/yargs": "^17.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.2.0",
+    "husky": "^7.0.4",
+    "prettier": "2.4.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.4.4"
+  },
+  "engines": {
+    "node": "12",
+    "npm": "6"
+  }
+}
